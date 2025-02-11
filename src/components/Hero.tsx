@@ -6,7 +6,7 @@ import { useGoogleLogin } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
 
 export const Hero = () => {
-  let navigate=useNavigate();
+  const navigate=useNavigate();
   async function handleSuccessToken(access_token: string) {
     if (access_token) {
       try {
