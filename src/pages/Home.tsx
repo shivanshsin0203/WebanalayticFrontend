@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Search, Globe, LogOut, Plus, Menu, X } from 'lucide-react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 interface SpaceCardProps {
   title: string;
   date: string;
   imageUrl: string;
+  projectId: string;
 }
 
 interface UserInformation {
@@ -22,10 +25,16 @@ interface Response {
   userEmail: string|undefined
  
 }
-const SpaceCard: React.FC<SpaceCardProps> = ({ title, date, imageUrl }) => (
+const SpaceCard: React.FC<SpaceCardProps> = ({ title, date, imageUrl,projectId }) =>{
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/project/${projectId}`);
+  };
+  return(
     <div 
     className="relative group cursor-pointer" 
-    
+    onClick={handleClick}
   >
     <div className="absolute top-3 left-3 bg-black/50 text-white px-2 py-1 rounded-full text-sm flex items-center gap-1">
       <div className="w-2 h-2 bg-green-400 rounded-full"></div>0
@@ -45,7 +54,7 @@ const SpaceCard: React.FC<SpaceCardProps> = ({ title, date, imageUrl }) => (
       </div>
     </div>
   </div>
-);
+)};
 
 const SpaceDashboard = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -54,6 +63,7 @@ const SpaceDashboard = () => {
   const [projectUrl, setProjectUrl] = useState('');
   const [userInformation, setUserInformation] = useState<UserInformation>();
   const [projects, setProjects] = useState<Response[]>();
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("userInfo") || "{}");
     const userset = {
@@ -66,11 +76,17 @@ const SpaceDashboard = () => {
         const result = await axios.get(`https://analyticbackend.singhshivansh12may.workers.dev/getUser?email=${user.email}`);
         console.log(result.data);
         setProjects(result.data.projects);
+        setIsLoading(false);
     }
     setUserInformation(userset);
     fetchProjects();
   }, []);
-
+  const LoadingSpinner = () => (
+    <div className="flex flex-col items-center justify-center min-h-[400px] w-full">
+      <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-[#3ecf8e]"></div>
+      <p className="mt-4 text-[#3ecf8e] text-lg">Loading your projects...</p>
+    </div>
+  );
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -98,9 +114,12 @@ const SpaceDashboard = () => {
     }
     axios.post("https://analyticbackend.singhshivansh12may.workers.dev/addUser",body);
   };
-
+  if (isLoading)
+  {
+    return <LoadingSpinner />;
+  }
   return (
-    <div className="min-h-screen bg-[#1e1f2e]">
+    <div className="min-h-screen bg-black]">
       {/* Navigation Bar */}
       <nav className="relative flex justify-between items-center px-4 md:px-6 py-4">
         <div className="flex items-center space-x-2 md:space-x-6">
@@ -240,6 +259,7 @@ const SpaceDashboard = () => {
               title={project.name}
               date={project.date}
               imageUrl={project.image}
+              projectId={project.key}
             />
           </div>
         ))}
