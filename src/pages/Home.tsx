@@ -64,6 +64,7 @@ const SpaceDashboard = () => {
   const [userInformation, setUserInformation] = useState<UserInformation>();
   const [projects, setProjects] = useState<Response[]>();
   const [isLoading, setIsLoading] = useState(true);
+  const navigate = useNavigate();
   useEffect(() => {
     const user = JSON.parse(localStorage.getItem("userInfo") || "{}");
     const userset = {
@@ -87,6 +88,12 @@ const SpaceDashboard = () => {
       <p className="mt-4 text-[#3ecf8e] text-lg">Loading your projects...</p>
     </div>
   );
+  function handleLogout() {
+    localStorage.removeItem("userInfo");
+    
+    navigate("/");
+  }
+    
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -140,7 +147,7 @@ const SpaceDashboard = () => {
             <Globe className="text-white w-5 h-5" />
             <span className="text-white">English</span>
           </div>
-          <div className='cursor-pointer flex items-center gap-2 px-4 py-2 rounded-lg transition-colors hover:text-white text-gray-300 hover:bg-red-400'>
+          <div onClick={handleLogout} className='cursor-pointer flex items-center gap-2 px-4 py-2 rounded-lg transition-colors hover:text-white text-gray-300 hover:bg-red-400'>
             <LogOut className="text-white w-5 h-5" />
             <span className="text-white">Logout</span>
           </div>

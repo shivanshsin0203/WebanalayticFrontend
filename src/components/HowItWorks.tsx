@@ -12,25 +12,25 @@ const features: FeatureProps[] = [
     icon: <MedalIcon />,
     title: "Accessibility",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Simply login to website and get started to Home Page",
   },
   {
     icon: <MapIcon />,
-    title: "Community",
+    title: "Project",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
-  },
-  {
-    icon: <PlaneIcon />,
-    title: "Scalability",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Add your project website which you want to track",
   },
   {
     icon: <GiftIcon />,
-    title: "Gamification",
+    title: "Analytics",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "You can track your website performance and user activity",
+  },
+  {
+    icon: <PlaneIcon/> ,
+    title: "Package",
+    description:
+      "Add analytics package to your website as stated in documentation on project page",
   },
 ];
 
@@ -48,8 +48,7 @@ export const HowItWorks = () => {
         Step-by-Step Guide
       </h2>
       <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
+      Setting up Webanalytic is quick and easy. Track website performance without sacrificing speed or user privacy!
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

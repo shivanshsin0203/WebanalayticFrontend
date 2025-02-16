@@ -30,47 +30,49 @@ const pricingList: PricingProps[] = [
     popular: 0,
     price: 0,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
+      "Perfect for small projects & personal websites. Basic analytics to track your visitors.",
     buttonText: "Get Started",
     benefitList: [
-      "1 Team member",
-      "2 GB Storage",
-      "Upto 4 pages",
+      "Unlimited Websites",
+      "Up to 10,000 events/month",
+      "Basic traffic analytics",
+      "30-day data retention",
       "Community support",
-      "lorem ipsum dolor",
     ],
   },
   {
     title: "Premium",
     popular: 1,
-    price: 5,
+    price: 9,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
+      "Ideal for growing businesses. Get more insights and longer data retention.",
     buttonText: "Start Free Trial",
     benefitList: [
-      "4 Team member",
-      "4 GB Storage",
-      "Upto 6 pages",
-      "Priority support",
-      "lorem ipsum dolor",
+      "Unlimited Websites",
+      "Up to 500,000 events/month",
+      "Real-time analytics",
+      "30-day data retention",
+      "Email & chat support",
     ],
   },
   {
     title: "Enterprise",
-    popular: 0,
-    price: 40,
+    popular: 1,
+    price: 49,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
+      "For high-traffic websites & enterprises needing custom solutions.",
+    buttonText: "Contact Us",
     benefitList: [
-      "10 Team member",
-      "8 GB Storage",
-      "Upto 10 pages",
-      "Priority support",
-      "lorem ipsum dolor",
+      "Unlimited Websites",
+      "Custom event limits",
+      "Advanced user behavior tracking",
+      "1-year data retention",
+      "Dedicated account manager",
+      "Custom integrations (BigQuery, etc.)",
     ],
   },
 ];
+
 
 export const Pricing = () => {
   return (
@@ -87,8 +89,7 @@ export const Pricing = () => {
         Access
       </h2>
       <h3 className="text-xl text-center text-muted-foreground pt-4 pb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias
-        reiciendis.
+      Empower your website with seamless analytics, privacy-first tracking, and high-speed performance.
       </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {pricingList.map((pricing: PricingProps) => (
@@ -108,7 +109,7 @@ export const Pricing = () => {
                     variant="secondary"
                     className="text-sm text-primary"
                   >
-                    Most popular
+                    Comming Soon
                   </Badge>
                 ) : null}
               </CardTitle>

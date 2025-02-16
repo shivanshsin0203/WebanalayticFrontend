@@ -20,18 +20,16 @@ export const About = () => {
                 <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
                   About{" "}
                 </span>
-                Company
+                Webanalytic
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit.
+              Webanalytic is a lightweight, privacy-focused analytics tool for modern web apps. 
+              It helps developers track real-time traffic, unique visitors, device usage, and more—all while respecting user privacy.
+              , Webanalytic provides clear insights without compromising speed or user data
               </p>
             </div>
 
-            <Statistics />
+            {/* <Statistics /> */}
           </div>
         </div>
       </div>

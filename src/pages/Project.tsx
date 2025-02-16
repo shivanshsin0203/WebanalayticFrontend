@@ -51,7 +51,7 @@ const ProjectPage = () => {
       try {
         // Fetch analytics data
         const analyticsResponse = await axios.get(
-          `http://127.0.0.1:8787/analytics?keyId=${keyId}`
+          `https://analyticbackend.singhshivansh12may.workers.dev/analytics?keyId=${keyId}`
         );
         console.log(analyticsResponse.data);
         setAnalyticsData(analyticsResponse.data);
@@ -65,7 +65,7 @@ const ProjectPage = () => {
       try {
         // Fetch daily data
         const dailyResponse = await axios.get(
-          `http://127.0.0.1:8787/analytics/daily?keyId=${keyId}&days=${selectedDays}`
+          `https://analyticbackend.singhshivansh12may.workers.dev/analytics/daily?keyId=${keyId}&days=${selectedDays}`
         );
         console.log(dailyResponse.data);
         setDailyData(dailyResponse.data);

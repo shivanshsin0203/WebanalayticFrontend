@@ -1,7 +1,7 @@
 import { Card, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { MagnifierIcon, WalletIcon, ChartIcon } from "./Icons";
-import cubeLeg from "../assets/cube-leg.png";
-
+import cubeLeg from "../assets/Animation.json";
+import Lottie from "react-lottie-player";
 interface ServiceProps {
   title: string;
   description: string;
@@ -10,22 +10,22 @@ interface ServiceProps {
 
 const serviceList: ServiceProps[] = [
   {
-    title: "Code Collaboration",
+    title: "Real-time Analytics",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <ChartIcon />,
+      "Monitor your website traffic, user interactions, and engagement instantly with minimal delay.",
+    icon: <MagnifierIcon />,
   },
   {
-    title: "Project Management",
+    title: "Privacy-Focused Tracking",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
+      "Webanalytic is cookie-free and GDPR-compliant, ensuring user privacy without invasive tracking.",
     icon: <WalletIcon />,
   },
   {
-    title: "Task Automation",
+    title: "Lightning-Fast Performance",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-    icon: <MagnifierIcon />,
+      "Optimized for speed, Webanalytic ensures lightweight tracking without affecting page load times.",
+    icon: <ChartIcon />,
   },
 ];
 
@@ -36,14 +36,13 @@ export const Services = () => {
         <div>
           <h2 className="text-3xl md:text-4xl font-bold">
             <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-              Client-Centric{" "}
+            Webanalytic{" "}
             </span>
-            Services
+            Features
           </h2>
 
           <p className="text-muted-foreground text-xl mt-4 mb-8 ">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-            dolor.
+          Empower your website with seamless analytics, privacy-first tracking, and high-speed performance.
           </p>
 
           <div className="flex flex-col gap-8">
@@ -64,11 +63,11 @@ export const Services = () => {
             ))}
           </div>
         </div>
-
-        <img
-          src={cubeLeg}
+        <Lottie
+          animationData={cubeLeg}
+          play
+          loop
           className="w-[300px] md:w-[500px] lg:w-[600px] object-contain"
-          alt="About services"
         />
       </div>
     </section>

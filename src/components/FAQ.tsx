@@ -13,36 +13,44 @@ interface FAQProps {
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free ChadcnUI template.",
+    question: "What kind of analytics does WebAnalytic provide?",
+    answer:
+      "WebAnalytic provides real-time user tracking, page views, unique visitors, session duration, and event-based analytics such as button clicks and form submissions.",
     value: "item-1",
   },
   {
-    question: "Lorem ipsum dolor sit amet consectetur adipisicing elit?",
+    question: "Is WebAnalytic GDPR and privacy-compliant?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "Yes! WebAnalytic is privacy-focused and does not use cookies. It fully complies with GDPR and other privacy regulations.",
     value: "item-2",
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet  Consectetur natus dolores minus quibusdam?",
+    question: "Can I track multiple websites with one account?",
     answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis necessitatibus maxime quis ipsa vitae cumque quo?",
+      "Yes, you can track multiple websites under one dashboard. The number of websites depends on your pricing plan.",
     value: "item-3",
   },
   {
-    question: "Lorem ipsum dolor sit amet, consectetur adipisicing elit?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    question: "How does WebAnalytic compare to Google Analytics?",
+    answer:
+      "Unlike Google Analytics, WebAnalytic is lightweight, privacy-friendly, and provides instant, real-time insights without tracking user data for advertising.",
     value: "item-4",
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur natus?",
+    question: "Does WebAnalytic support event tracking?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam? Consectetur sapiente iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+      "Yes! You can track custom events like button clicks, purchases, form submissions, and more using our simple event API.",
     value: "item-5",
   },
+  {
+    question: "Do you offer API access for developers?",
+    answer:
+      "Yes! WebAnalytic provides an API for integrating analytics into your applications programmatically.",
+    value: "item-6",
+  },
+  
 ];
+
 
 export const FAQ = () => {
   return (

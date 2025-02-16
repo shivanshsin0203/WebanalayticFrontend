@@ -16,6 +16,7 @@ export const Hero = () => {
         const userInfo = await res.json();
         console.log(userInfo);
         localStorage.setItem("userInfo", JSON.stringify(userInfo));
+        navigate("/home");
       } catch (error) {
         console.error("Error fetching user info:", error);
       }
@@ -52,9 +53,9 @@ export const Hero = () => {
         <main className="text-5xl md:text-6xl font-bold">
           <h1 className="inline">
             <span className="inline bg-gradient-to-r from-[#F596D3]  to-[#D247BF] text-transparent bg-clip-text">
-              Shadcn
+             Analyze
             </span>{" "}
-            landing page
+            your website
           </h1>{" "}
           for{" "}
           <h2 className="inline">
@@ -66,8 +67,7 @@ export const Hero = () => {
         </main>
 
         <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-          Build your React landing page effortlessly with the required sections
-          to your project.
+          Analyze your React website effortlessly within seconds .
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
@@ -77,7 +77,7 @@ export const Hero = () => {
 
           <a
             rel="noreferrer noopener"
-            href="https://github.com/leoMirandaa/shadcn-landing-page.git"
+            href="https://github.com/shivanshsin0203/WebanalayticFrontend"
             target="_blank"
             className={`w-full md:w-1/3 ${buttonVariants({
               variant: "outline",
