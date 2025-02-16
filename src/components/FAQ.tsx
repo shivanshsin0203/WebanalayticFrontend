@@ -88,7 +88,7 @@ export const FAQ = () => {
         Still have questions?{" "}
         <a
           rel="noreferrer noopener"
-          href="#"
+          href="https://x.com/ShivanshSi0203"
           className="text-primary transition-all border-primary hover:border-b-2"
         >
           Contact us

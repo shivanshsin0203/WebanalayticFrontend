@@ -54,7 +54,7 @@ export const Navbar = () => {
               href="/"
               className="ml-2 font-bold text-xl flex"
             >
-              <LogoIcon />
+              <img src="../src/assets/icons.ico" className=" lucide lucide-panels-top-left mr-2 w-6 h-6"></img>
               Webanalytic
             </a>
           </NavigationMenuItem>

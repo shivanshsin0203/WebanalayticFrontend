@@ -46,24 +46,24 @@ const InstallationSteps: React.FC<InstallationStepsProps> = ({ keyId }) => {
         <div>
           <h3 className="text-xl font-semibold mb-3">1. Install Package</h3>
           <div className="bg-[#1e1f2e] p-4 rounded-lg flex items-center">
-            <code>npm install analytic</code>
-            <CopyButton text="npm install analytic" id="install" />
+            <code>npm install webanalytic-trackers</code>
+            <CopyButton text="npm install webanalytic-trackers" id="install" />
           </div>
         </div>
 
         <div>
           <h3 className="text-xl font-semibold mb-3">2. Import Package</h3>
           <div className="bg-[#1e1f2e] p-4 rounded-lg flex items-center">
-            <code>import {'{ Analytics }'} from 'analytic';</code>
-            <CopyButton text="import { Analytics } from 'analytic';" id="import" />
+            <code>import {'{ Analytics }'} from 'webanalytic-trackers';</code>
+            <CopyButton text="import { Analytics } from 'webanalytic-trackers';" id="import" />
           </div>
         </div>
 
         <div>
           <h3 className="text-xl font-semibold mb-3">3. Initialize Analytics in your react project root</h3>
           <div className="bg-[#1e1f2e] p-4 rounded-lg flex items-center">
-            <code>{`const analytics = new Analytics('${keyId}');`}</code>
-            <CopyButton text={`const analytics = new Analytics('${keyId}');`} id="init" />
+            <code>{`<Analytics keyId="${keyId}" />`}</code>
+            <CopyButton text={`<Analytics keyId="${keyId}`} id="init" />
           </div>
         </div>
 

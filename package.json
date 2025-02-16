@@ -1,10 +1,10 @@
 {
-  "name": "shadcn-landing-page-template",
-  "description": "Landing page template utilizing Shadcn, React, Typescript, and Tailwind CSS for rapid development and responsive design.",
+  "name": "wenanalytic",
+  "description": ".",
   "author": {
-    "name": "Leopoldo Miranda",
-    "email": "leomirandadev@gmail.com",
-    "url": "https://github.com/leoMirandaa"
+    "name": "Shivansh Singh",
+    "email": "formaldehyde080@gmail.com",
+    "url": "https://github.com/shivanshsin0203"
   },
   "license": "MIT",
   "keywords": [

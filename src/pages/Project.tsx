@@ -53,7 +53,7 @@ const ProjectPage = () => {
         const analyticsResponse = await axios.get(
           `https://analyticbackend.singhshivansh12may.workers.dev/analytics?keyId=${keyId}`
         );
-        console.log(analyticsResponse.data);
+        
         setAnalyticsData(analyticsResponse.data);
       } catch (error) {
         console.error('Error fetching analytics:', error);
@@ -67,7 +67,7 @@ const ProjectPage = () => {
         const dailyResponse = await axios.get(
           `https://analyticbackend.singhshivansh12may.workers.dev/analytics/daily?keyId=${keyId}&days=${selectedDays}`
         );
-        console.log(dailyResponse.data);
+        
         setDailyData(dailyResponse.data);
       } catch (error) {
         console.error('Error fetching daily data:', error);

@@ -14,7 +14,7 @@ export const Hero = () => {
           headers: { Authorization: `Bearer ${access_token}` },
         });
         const userInfo = await res.json();
-        console.log(userInfo);
+        
         localStorage.setItem("userInfo", JSON.stringify(userInfo));
         navigate("/home");
       } catch (error) {
@@ -29,14 +29,14 @@ export const Hero = () => {
     if (!localStorage.getItem("userInfo")) {
       login(); // Directly call login() when button is clicked
     } else {
-      console.log("User already logged in");
+     
       navigate("/home");
     }
   }
 
   const login = useGoogleLogin({
     onSuccess: (response) => {
-      console.log(response);
+      
       if ("access_token" in response) {
         handleSuccessToken(response.access_token);
       } else {

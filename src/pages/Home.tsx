@@ -75,7 +75,7 @@ const SpaceDashboard = () => {
     async function fetchProjects() {
         const user = JSON.parse(localStorage.getItem("userInfo") || "{}");
         const result = await axios.get(`https://analyticbackend.singhshivansh12may.workers.dev/getUser?email=${user.email}`);
-        console.log(result.data);
+        
         setProjects(result.data.projects);
         setIsLoading(false);
     }
@@ -98,13 +98,19 @@ const SpaceDashboard = () => {
     e.preventDefault();
     
     // Handle form submission here
-    console.log({ projectName, projectUrl });
+    
     const key=Math.random().toString(36).substr(2, 9)
+     
+    const apiKeys = ["b143c0", "5bf07b", "e30dd7","34ebb6","069fc3","7a84dc"];
+    
+    // Pick a random API key
+    const randomKey = apiKeys[Math.floor(Math.random() * apiKeys.length)];
+    
     const newProject:Response = {
       id: Math.floor(Math.random() * 1000),
       key: key,
       name:projectName,
-      image: `https://api.screenshotmachine.com?key=5bf07b&url=${projectUrl}&dimension=1024x768&format=jpg`,
+      image: `https://api.screenshotmachine.com?key=${randomKey}&url=${projectUrl}&dimension=1024x768&format=jpg`,
       date: new Date()+"",
       userEmail:userInformation?.email
     };
