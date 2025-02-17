@@ -74,10 +74,15 @@ const SpaceDashboard = () => {
     };
     async function fetchProjects() {
         const user = JSON.parse(localStorage.getItem("userInfo") || "{}");
+        try{
         const result = await axios.get(`https://analyticbackend.singhshivansh12may.workers.dev/getUser?email=${user.email}`);
         
         setProjects(result.data.projects);
+        }catch(e){
+          setProjects([]);
+        }finally{
         setIsLoading(false);
+        }
     }
     setUserInformation(userset);
     fetchProjects();

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import { PieChart, Pie, Cell, LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
@@ -241,7 +241,7 @@ const ProjectPage = () => {
                           dataKey="value"
                           label
                         >
-                          {prepareDeviceData().map((entry, index) => (
+                          {prepareDeviceData().map((_entry, index) => (
                             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                           ))}
                         </Pie>
@@ -272,7 +272,7 @@ const ProjectPage = () => {
                           dataKey="value"
                           label
                         >
-                          {prepareCountryData().map((entry, index) => (
+                          {prepareCountryData().map((_entry, index) => (
                             <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                           ))}
                         </Pie>
